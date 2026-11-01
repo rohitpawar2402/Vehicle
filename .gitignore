@@ -38,6 +38,7 @@ data/test_snapshots/*
 .snapshots/
 
 # Environment variables & system files
+gh.exe
 .env
 .DS_Store
 Thumbs.db
