@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+build/
+dist/
+wheels/
+*.egg-info
+
+# Model weights & large binary checkpoints (download via scripts/instructions)
+*.pt
+*.onnx
+*.engine
+yolov8s.pt
+models/*.pt
+data/easyocr_models/
+
+# Video recordings & heavy media clips
+*.mp4
+*.avi
+*.mov
+*.mkv
+data/*.mp4
+
+# SQLite databases & evidence crop archives
+data/*.db
+data/snapshots/*
+!data/snapshots/.gitkeep
+data/test_snapshots/*
+!data/test_snapshots/.gitkeep
+.snapshots/
+
+# Environment variables & system files
+.env
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

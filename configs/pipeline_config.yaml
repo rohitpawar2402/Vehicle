@@ -1,0 +1,29 @@
+hardware:
+  device: "cuda:0"
+  half_precision: true        # FP16 cuts VRAM usage by 50% and boosts inference to 35+ FPS
+  input_resolution: [1280, 720]
+  inference_batch_size: 1
+
+models:
+  primary_detector:
+    weights: "models/yolov8s.pt"  # Use 's' (small) instead of 'x' for 4GB VRAM
+    conf_threshold: 0.45
+    iou_threshold: 0.50
+    classes: [2, 3]               # COCO: 2 = car, 3 = motorcycle
+
+  helmet_detector:
+    weights: "models/yolov8n_helmet.pt"
+    conf_threshold: 0.55
+    input_size: 320
+
+  seatbelt_detector:
+    weights: "models/yolov8s_seatbelt.pt"
+    conf_threshold: 0.65
+    input_size: 384
+
+zone_and_voting:
+  zone_config_path: "configs/zones.json"
+  min_frames_in_zone: 5
+  max_frames_in_zone: 15
+  voting_confidence_threshold: 0.70
+

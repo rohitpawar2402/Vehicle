@@ -1,0 +1,13 @@
+# Seatbelt Detection Dataset Configuration for YOLOv8
+# Format: Ultralytics YOLO dataset format
+
+path: data/datasets/seatbelt  # dataset root dir
+train: images/train          # train images (relative to 'path')
+val: images/val              # val images (relative to 'path')
+test: images/test            # test images (optional)
+
+# Classes mapping
+names:
+  0: NO_SEATBELT
+  1: SEATBELT_ON
+
